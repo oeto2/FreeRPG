@@ -1,18 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Logger : MonoBehaviour
+public static class Logger
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void Log(object message_)
     {
-        
+        Debug.Log(message_);
     }
 
-    // Update is called once per frame
-    void Update()
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void Log(object message, Object context)
     {
-        
+        Debug.Log(message, context);
+    }
+
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void LogWarning(object message)
+    {
+        Debug.LogWarning(message);
+    }
+
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void LogWarning(object message, Object context)
+    {
+        Debug.LogWarning(message, context);
+    }
+
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void LogError(object message)
+    {
+        Debug.LogError(message);
+    }
+
+    [System.Diagnostics.Conditional("ENABLE_LOG")]
+    public static void LogError(object message, Object context)
+    {
+        Debug.LogError(message, context);
     }
 }
