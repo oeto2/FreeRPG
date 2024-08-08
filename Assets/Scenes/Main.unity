@@ -3934,8 +3934,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 941188705}
+  - component: {fileID: 941188706}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3957,6 +3958,23 @@ Transform:
   m_Father: {fileID: 2092037243}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &941188706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941188704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cfba7347b357ae4d88cd2ce5405a93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterSO: {fileID: 11400000, guid: 4ee0a2c49eb4f5948b30d86c44c53c8a, type: 2}
+  <Name>k__BackingField: 
+  <Grade>k__BackingField: 0
+  <Speed>k__BackingField: 0
+  <Health>k__BackingField: 0
 --- !u!1 &1013136069
 GameObject:
   m_ObjectHideFlags: 0
