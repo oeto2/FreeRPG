@@ -16,7 +16,8 @@ namespace Constants
         Idle, //기본
         Walk, //걷기
         Attack, //공격
-        Hit //피격
+        Hit, //피격
+        Dead //사망
     }
     
     //프리팹 주소
