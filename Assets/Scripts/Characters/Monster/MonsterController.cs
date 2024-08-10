@@ -71,6 +71,13 @@ public class MonsterController : MonoBehaviour, IDamagable
     //기본 상태 로직
     private void IdleUpdate()
     {
+        //체력이 0 이하라면 사망
+        if (monsterStatus.Health <= 0)
+        {
+            ChangeState(MonsterState.Dead);
+            return;
+        }
+        
         //WalkState 변경 조건
         if (_distanceFromPlayer > attackRange)
         {
@@ -81,6 +88,13 @@ public class MonsterController : MonoBehaviour, IDamagable
     //이동 상태 로직
     private void WalkUpdate()
     {
+        //체력이 0 이하라면 사망
+        if (monsterStatus.Health <= 0)
+        {
+            ChangeState(MonsterState.Dead);
+            return;
+        }
+        
         //공격 사정거리 밖
         if (_distanceFromPlayer > attackRange)
         {
@@ -97,6 +111,12 @@ public class MonsterController : MonoBehaviour, IDamagable
     //공격 상태 로직
     private void AttackUpdate()
     {
+        //체력이 0 이하라면 사망
+        if (monsterStatus.Health <= 0)
+        {
+            ChangeState(MonsterState.Dead);
+            return;
+        }
     }
 
     //피격 상태 로직
