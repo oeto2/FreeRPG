@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 85626465364182111}
   - component: {fileID: 3041556299066886127}
   - component: {fileID: 5921661512243463331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1071404994868976014}
   - component: {fileID: 5917709044146488645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HP_Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 5832802407281846915}
   - component: {fileID: 1081671160458454556}
   - component: {fileID: 4678859534922225817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,9 @@ GameObject:
   - component: {fileID: 7712568242996287684}
   - component: {fileID: 4217776009480868616}
   - component: {fileID: 1942935013157628268}
-  m_Layer: 0
+  - component: {fileID: 4912699526379139059}
+  - component: {fileID: 1319705410326420553}
+  m_Layer: 7
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -511,4 +513,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d2864d529d4e9c4b8746e062f76b997, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterStatus: {fileID: 0}
+  _state: 0
   attackRange: 1
+--- !u!114 &4912699526379139059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162651540246975239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5852868364b6074b8535d94e5bcf351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpSlider: {fileID: 5917709044146488645}
+--- !u!61 &1319705410326420553
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8162651540246975239}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12, y: 0.03}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.79, y: 0.73}
+  m_EdgeRadius: 0

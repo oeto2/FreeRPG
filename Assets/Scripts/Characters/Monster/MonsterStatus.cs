@@ -4,12 +4,13 @@ using Constants;
 public class MonsterStatus : MonoBehaviour
 {
     [SerializeField] private MonsterSO monsterSO; // 몬스터 SO
-    
+
     //변수 : 몬스터 스텟관련
-    public string Name { get; set;} //이름
-    public MonsterGrade Grade { get; set;} //등급
-    public float Speed { get; set;} //속도
-    public float Health { get; set;} //체력
+    public string Name { get; set; } //이름
+    public MonsterGrade Grade { get; set; } //등급
+    public float Speed { get; set; } //속도
+    public float Health { get; set; } //체력
+    public float MaxHealth { get; set; } //최대 체력
 
     private void Awake()
     {
@@ -23,5 +24,6 @@ public class MonsterStatus : MonoBehaviour
         Grade = monsterSO.Grade;
         Speed = monsterSO.Speed;
         Health = monsterSO.Health;
+        MaxHealth = monsterSO.Health;
     }
 }

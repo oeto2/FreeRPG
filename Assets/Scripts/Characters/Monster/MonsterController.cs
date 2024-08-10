@@ -1,27 +1,26 @@
-using System;
 using UnityEngine;
 using Constants;
-using UnityEngine.Serialization;
 
 public class MonsterController : MonoBehaviour, IDamagable
 {
-    private MonsterStatus _monsterStatus; //몬스터 스텟
+    [HideInInspector] public MonsterStatus monsterStatus; //몬스터 스텟
     [SerializeField] private MonsterState _state; //몬스터 상태
     private GameObject _targetObj; //공격대상 (플레이어)
     private MonsterAnimationData _animationData; //몬스터 애니메이션 데이터
     private Animator _animator; //플레이어 애니메이터
+    private MonsterUI _monsterUI;
 
     //변수 : 몬스터 이동 관련
     [SerializeField] private float attackRange; //공격 사정거리
     private float _distanceFromPlayer; //플레이어와의 거리
 
-
     private void Awake()
     {
         _animationData = new MonsterAnimationData();
         _animationData.InitializeParameters();
-        _monsterStatus = GetComponent<MonsterStatus>();
+        monsterStatus = GetComponent<MonsterStatus>();
         _animator = GetComponentInChildren<Animator>();
+        _monsterUI = GetComponent<MonsterUI>();
     }
 
     private void Start()
@@ -38,7 +37,7 @@ public class MonsterController : MonoBehaviour, IDamagable
     {
         //플레이어와의 거리
         _distanceFromPlayer = Vector2.Distance(_targetObj.transform.position, transform.position);
-        
+
         //상태에 따른 동작구현
         switch (_state)
         {
@@ -156,12 +155,17 @@ public class MonsterController : MonoBehaviour, IDamagable
     public void OnMove()
     {
         //몬스터 포지션 변경
-        transform.position += Vector3.left * (_monsterStatus.Speed * Time.deltaTime);
+        transform.position += Vector3.left * (monsterStatus.Speed * Time.deltaTime);
     }
 
     public void TakeDamage(float damage_)
     {
-        _monsterStatus.Health -= damage_;
-        Logger.Log("몬스터가 데미지 받음");
+        monsterStatus.Health -= damage_; //데미지 처리
+        //최소 체력 적용
+        if (monsterStatus.Health < 0) 
+            monsterStatus.Health = 0;
+        
+        Logger.Log($"몬스터가 {damage_}의 데미지 받음, 남은 체력 : {monsterStatus.Health}");
+        _monsterUI.UpdateMonsterHPUI(); //체력 UI 업데이트
     }
 }
