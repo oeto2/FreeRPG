@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private float _distanceFromMonster; //몬스터와의 거리
     private GameObject _targetObj; //공격 대상
     public MonsterStatus targetStatus; //공격 대상 스텟
-    private bool _attackChance; //공격 찬스
+    [SerializeField]private bool _attackChance; //공격 찬스
     private WaitForSeconds _attackCoolTime; //공격 대기시간
     
     private void Awake()
@@ -36,6 +36,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        _targetObj = GameManager.Instance.monsterObj;
+        targetStatus = GameManager.Instance.targetMonsterStatus;
+        
         //몬스터와의 거리 계산
         _distanceFromMonster = Vector2.Distance(transform.position,_targetObj.transform.position);
         
@@ -59,7 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         //몬스터가 공격 사정거리안에 들어올 경우 + 공격 가능 + 대상체력이 0이상
         if (_distanceFromMonster < playerStatus.AttackRange && _attackChance && targetStatus.Health > 0)
-        { 
+        {
             ChangeState(PlayerState.Attack); //공격상태 변경
         }
     }
@@ -67,7 +70,7 @@ public class PlayerController : MonoBehaviour
     //공격 상태 로직
     private void AttackUpdate()
     {
-        //공격 중지 : 공격 대상의 체력이 0이하일경우
+        //공격 중지 : 공격 대상이 사망했을 경우
         if (targetStatus.Health <= 0)
         {
             ChangeState(PlayerState.Idle);

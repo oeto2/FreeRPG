@@ -6,11 +6,10 @@ using Constants;
 
 public class MonsterCSVtoSO
 {
-    private static string monsterCSVPath = "/Data/CSV/SampleMonster.csv";
     [MenuItem("Utilities/Generate Monsters")]
     public static void GenerateMonsters()
     {
-        string[] allLines = File.ReadAllLines(Application.dataPath + monsterCSVPath);
+        string[] allLines = File.ReadAllLines(Application.dataPath + CSVPath.MonsterCSVPath);
 
         for (int i = 1; i < allLines.Length; i++)
         {

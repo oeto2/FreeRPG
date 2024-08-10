@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using Constants;
 
@@ -7,12 +8,16 @@ public class MonsterController : MonoBehaviour, IDamagable
     [SerializeField] private MonsterState _state; //몬스터 상태
     private GameObject _targetObj; //공격대상 (플레이어)
     private MonsterAnimationData _animationData; //몬스터 애니메이션 데이터
-    private Animator _animator; //플레이어 애니메이터
+    private Animator _animator; //몬스터 애니메이터
     private MonsterUI _monsterUI;
 
     //변수 : 몬스터 이동 관련
     [SerializeField] private float attackRange; //공격 사정거리
     private float _distanceFromPlayer; //플레이어와의 거리
+    
+    //변수 : 몬스터 사망 관련
+    private WaitForSeconds _monsterFadeTime; //몬스터 시체 사라지는 시간
+    private bool _isDead = false; //몬스터 사망 Flag    
 
     private void Awake()
     {
@@ -25,8 +30,8 @@ public class MonsterController : MonoBehaviour, IDamagable
 
     private void Start()
     {
+        _monsterFadeTime = new WaitForSeconds(1.5f); //몬스터 시체 사라지는 시간 (임시)
         _targetObj = GameManager.Instance.playerObj;
-
         if (_targetObj == null)
         {
             Logger.LogError("플레이어 오브젝트가 존재하지 않습니다.");
@@ -127,6 +132,9 @@ public class MonsterController : MonoBehaviour, IDamagable
     //사망 상태 로직
     private void DeadUpdate()
     {
+        //중복 실행 방지
+        if (!_isDead)
+            StartCoroutine(MonsterDead()); //몬스터 사망처리
     }
 
     //상태 변경
@@ -178,6 +186,7 @@ public class MonsterController : MonoBehaviour, IDamagable
         transform.position += Vector3.left * (monsterStatus.Speed * Time.deltaTime);
     }
 
+    //데미지 받기
     public void TakeDamage(float damage_)
     {
         monsterStatus.Health -= damage_; //데미지 처리
@@ -187,5 +196,15 @@ public class MonsterController : MonoBehaviour, IDamagable
         
         // Logger.Log($"몬스터가 {damage_}의 데미지 받음, 남은 체력 : {monsterStatus.Health}");
         _monsterUI.UpdateMonsterHPUI(); //체력 UI 업데이트
+    }
+    
+    //몬스터 사망시
+    private IEnumerator MonsterDead()
+    {
+        _isDead = true;
+        yield return _monsterFadeTime; //사망시간 딜레이 
+        gameObject.SetActive(false); //오브젝트 비활성화
+        _isDead = false;
+        GameManager.Instance.CallMonsterSpawnEvent(); //몬스터 소환
     }
 }
