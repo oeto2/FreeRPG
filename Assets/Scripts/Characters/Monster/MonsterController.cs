@@ -185,7 +185,7 @@ public class MonsterController : MonoBehaviour, IDamagable
         if (monsterStatus.Health < 0) 
             monsterStatus.Health = 0;
         
-        Logger.Log($"몬스터가 {damage_}의 데미지 받음, 남은 체력 : {monsterStatus.Health}");
+        // Logger.Log($"몬스터가 {damage_}의 데미지 받음, 남은 체력 : {monsterStatus.Health}");
         _monsterUI.UpdateMonsterHPUI(); //체력 UI 업데이트
     }
 }

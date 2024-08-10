@@ -32,6 +32,10 @@ namespace Constants
     {
         public const string PlayerPrefabPath = "Player"; //플레이어 프리팹 주소
         public const string SkeletonPrefabPath = "Skeleton"; //스켈레톤 프리팹 주소
+        public const string EliteOrcPrefabPath = "EliteOrc"; //엘리트오크 프리팹 주소
+        public const string OrcRiderPrefabPath = "OrcRider"; //오크 라이더 프리팹 주소
+        public const string WerebearPrefabPath = "Werebear"; //웨어베어 프리팹 주소
+        public const string WizardPrefabPath = "Wizard"; //위자드 프리팹 주소
     }
     
     //레이어 모음
