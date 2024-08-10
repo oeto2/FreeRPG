@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PlayerSO
   m_EditorClassIdentifier: 
   <Damage>k__BackingField: 100
-  <Health>k__BackingField: 0
   <AttackSpeed>k__BackingField: 1
+  <AttackRange>k__BackingField: 1
+  <AttackCoolTime>k__BackingField: 1

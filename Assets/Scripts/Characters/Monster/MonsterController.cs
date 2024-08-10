@@ -1,33 +1,44 @@
+using System;
 using UnityEngine;
 using Constants;
+using UnityEngine.Serialization;
 
 public class MonsterController : MonoBehaviour, IDamagable
 {
     private MonsterStatus _monsterStatus; //몬스터 스텟
-    private MonsterState _state; //몬스터 상태
-    private GameObject _playerObj; //플레이어 오브젝트
+    [SerializeField] private MonsterState _state; //몬스터 상태
+    private GameObject _targetObj; //공격대상 (플레이어)
     private MonsterAnimationData _animationData; //몬스터 애니메이션 데이터
     private Animator _animator; //플레이어 애니메이터
 
     //변수 : 몬스터 이동 관련
-    [SerializeField] private float attackDistance; //공격 사정거리
+    [SerializeField] private float attackRange; //공격 사정거리
     private float _distanceFromPlayer; //플레이어와의 거리
 
 
     private void Awake()
     {
-        _playerObj = GameManager.Instance.playerObj;
         _animationData = new MonsterAnimationData();
         _animationData.InitializeParameters();
         _monsterStatus = GetComponent<MonsterStatus>();
         _animator = GetComponentInChildren<Animator>();
     }
 
+    private void Start()
+    {
+        _targetObj = GameManager.Instance.playerObj;
+
+        if (_targetObj == null)
+        {
+            Logger.LogError("플레이어 오브젝트가 존재하지 않습니다.");
+        }
+    }
+
     private void Update()
     {
         //플레이어와의 거리
-        _distanceFromPlayer = Vector2.Distance(_playerObj.transform.position, transform.position);
-
+        _distanceFromPlayer = Vector2.Distance(_targetObj.transform.position, transform.position);
+        
         //상태에 따른 동작구현
         switch (_state)
         {
@@ -50,7 +61,7 @@ public class MonsterController : MonoBehaviour, IDamagable
             case MonsterState.Hit:
                 HitUpdate();
                 break;
-            
+
             //사망 상태
             case MonsterState.Dead:
                 DeadUpdate();
@@ -62,7 +73,7 @@ public class MonsterController : MonoBehaviour, IDamagable
     private void IdleUpdate()
     {
         //WalkState 변경 조건
-        if (_distanceFromPlayer < attackDistance)
+        if (_distanceFromPlayer > attackRange)
         {
             ChangeState(MonsterState.Walk); //몬스터 이동상태 전환
         }
@@ -72,7 +83,7 @@ public class MonsterController : MonoBehaviour, IDamagable
     private void WalkUpdate()
     {
         //공격 사정거리 밖
-        if (_distanceFromPlayer < attackDistance)
+        if (_distanceFromPlayer > attackRange)
         {
             OnMove(); //이동
         }
@@ -93,7 +104,7 @@ public class MonsterController : MonoBehaviour, IDamagable
     private void HitUpdate()
     {
     }
-    
+
     //사망 상태 로직
     private void DeadUpdate()
     {

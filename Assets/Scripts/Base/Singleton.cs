@@ -24,6 +24,8 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             if (_instance == null)
             {
+                Debug.Log("게임 오브젝트 생성");
+                
                 //오브젝트 생성 이름 지정
                 string typeName = typeof(T).Name;
                 GameObject obj = new GameObject(typeName);

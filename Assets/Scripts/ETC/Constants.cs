@@ -20,6 +20,13 @@ namespace Constants
         Dead //사망
     }
     
+    //플레이어 상태
+    public enum PlayerState
+    {
+        Idle,
+        Attack
+    }
+    
     //프리팹 주소
     public class PrefabsPath
     {
