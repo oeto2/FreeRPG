@@ -17,7 +17,10 @@ public class MonsterController : MonoBehaviour, IDamagable
     
     //변수 : 몬스터 사망 관련
     private WaitForSeconds _monsterFadeTime; //몬스터 시체 사라지는 시간
-    private bool _isDead = false; //몬스터 사망 Flag    
+    private bool _isDead = false; //몬스터 사망 Flag
+    
+    //변수 : 몬스터 리셋 관련
+    private Vector3 _monsterSpawnPos;
 
     private void Awake()
     {
@@ -30,6 +33,7 @@ public class MonsterController : MonoBehaviour, IDamagable
 
     private void Start()
     {
+        _monsterSpawnPos = transform.position; //몬스터 초기 스폰위치 저장
         _monsterFadeTime = new WaitForSeconds(1.5f); //몬스터 시체 사라지는 시간 (임시)
         _targetObj = GameManager.Instance.playerObj;
         if (_targetObj == null)
@@ -205,6 +209,16 @@ public class MonsterController : MonoBehaviour, IDamagable
         yield return _monsterFadeTime; //사망시간 딜레이 
         gameObject.SetActive(false); //오브젝트 비활성화
         _isDead = false;
+        ResetMonster(); //몬스터 리셋
         GameManager.Instance.CallMonsterSpawnEvent(); //몬스터 소환
+    }
+    
+    //몬스터 리셋 (재사용)
+    private void ResetMonster()
+    {
+        transform.position = _monsterSpawnPos; //초기 위치로 되돌리기
+        ChangeState(MonsterState.Idle); //기본상태 전환
+        monsterStatus.Initialize_MonsterData(); //몬스터 스텟 초기화
+        _monsterUI.UpdateMonsterHPUI(); //체력 UI 업데이트
     }
 }

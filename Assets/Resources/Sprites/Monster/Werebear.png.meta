@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5320e6cc023540543a87a72f15ebf34d
+guid: 93540fbccc3f00a43b0ca679bd72ef3a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton-Idle_0
+      name: Werebear_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
+        x: 36
+        y: 37
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb68cf6821d390d48bc29a8400ae8b4c
-      internalID: 1782912422
+      spriteID: 7ccbc29e65d4eb5458e63f3482b322ab
+      internalID: -748702636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_1
+      name: Werebear_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
+        x: 142
+        y: 43
+        width: 19
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ea421445ea97c47bd8743310888d73
-      internalID: 200008807
+      spriteID: ccc2bdf547dae8642bb725e617084264
+      internalID: 1011155971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_2
+      name: Werebear_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
+        x: 242
+        y: 43
+        width: 19
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e1dda68c8497743a49130b1aa0395f
-      internalID: -932076242
+      spriteID: 8c9b4f6849f2ecd4687158d8ee4ba08c
+      internalID: -1008063636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_3
+      name: Werebear_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
+        x: 342
+        y: 43
+        width: 19
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26ae93ab1f3f554385be158e8aa9ead
-      internalID: 267633489
+      spriteID: 73dd42d694182c94596a810326f520e1
+      internalID: 1756750497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_4
+      name: Werebear_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
+        x: 442
+        y: 43
+        width: 19
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cdb6a0eadefde44a0e476fe0ada173
-      internalID: 791429640
+      spriteID: b477c69cb6f6e3749b3624cde8e0f859
+      internalID: 1210463111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_5
+      name: Werebear_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
+        x: 542
+        y: 43
+        width: 19
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce292f596f89f54a9e21692b86fc61f
-      internalID: 1596330421
+      spriteID: b3cee180435e6cd4687918b9169551d9
+      internalID: -311896620
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton-Idle_0: 1782912422
-      Skeleton-Idle_1: 200008807
-      Skeleton-Idle_2: -932076242
-      Skeleton-Idle_3: 267633489
-      Skeleton-Idle_4: 791429640
-      Skeleton-Idle_5: 1596330421
+      Werebear_0: -748702636
+      Werebear_1: 1011155971
+      Werebear_2: -1008063636
+      Werebear_3: 1756750497
+      Werebear_4: 1210463111
+      Werebear_5: -311896620
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

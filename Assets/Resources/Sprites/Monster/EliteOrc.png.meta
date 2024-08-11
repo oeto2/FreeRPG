@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5320e6cc023540543a87a72f15ebf34d
+guid: bfddd42238a0024479e7a6f9bae48f24
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton-Idle_0
+      name: EliteOrc_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
+        x: 39
+        y: 38
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb68cf6821d390d48bc29a8400ae8b4c
-      internalID: 1782912422
+      spriteID: fc0a6d8b93a3e9646a9402afcaefec02
+      internalID: -1693941272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_1
+      name: EliteOrc_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
+        x: 142
+        y: 43
+        width: 28
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ea421445ea97c47bd8743310888d73
-      internalID: 200008807
+      spriteID: cf2fd51fd6087aa46b7e46fed275ad82
+      internalID: 1497262322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_2
+      name: EliteOrc_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
+        x: 242
+        y: 43
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e1dda68c8497743a49130b1aa0395f
-      internalID: -932076242
+      spriteID: 7060bcb99ad3f81418e9c13856338d8b
+      internalID: 169690154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_3
+      name: EliteOrc_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
+        x: 342
+        y: 43
+        width: 28
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26ae93ab1f3f554385be158e8aa9ead
-      internalID: 267633489
+      spriteID: 78bbffc135f575b4da465761226eecbe
+      internalID: 1009419939
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_4
+      name: EliteOrc_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
+        x: 442
+        y: 43
+        width: 28
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cdb6a0eadefde44a0e476fe0ada173
-      internalID: 791429640
+      spriteID: 7b1b88bbf755dfc4c80f9a4cdb0b4d62
+      internalID: -610433995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_5
+      name: EliteOrc_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
+        x: 542
+        y: 43
+        width: 28
+        height: 23
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce292f596f89f54a9e21692b86fc61f
-      internalID: 1596330421
+      spriteID: 2a6567dc2865c3a4ba95c16e93fd2fdc
+      internalID: -1591278866
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton-Idle_0: 1782912422
-      Skeleton-Idle_1: 200008807
-      Skeleton-Idle_2: -932076242
-      Skeleton-Idle_3: 267633489
-      Skeleton-Idle_4: 791429640
-      Skeleton-Idle_5: 1596330421
+      EliteOrc_0: -1693941272
+      EliteOrc_1: 1497262322
+      EliteOrc_2: 169690154
+      EliteOrc_3: 1009419939
+      EliteOrc_4: -610433995
+      EliteOrc_5: -1591278866
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5320e6cc023540543a87a72f15ebf34d
+guid: 33a380ce2e03f544e9d0702ad41e918e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton-Idle_0
+      name: Orcrider_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
+        x: 37
+        y: 41
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb68cf6821d390d48bc29a8400ae8b4c
-      internalID: 1782912422
+      spriteID: 5ca26afbab98e114d8ab987a5c66999e
+      internalID: -1671265137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_1
+      name: Orcrider_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
+        x: 137
+        y: 43
+        width: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ea421445ea97c47bd8743310888d73
-      internalID: 200008807
+      spriteID: 47266b5822df8ee4f89982ba7406b229
+      internalID: -120931766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_2
+      name: Orcrider_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
+        x: 237
+        y: 43
+        width: 31
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e1dda68c8497743a49130b1aa0395f
-      internalID: -932076242
+      spriteID: e1868d18bb0309a40a8c39ae8b0a7fcd
+      internalID: 1500875997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_3
+      name: Orcrider_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
+        x: 337
+        y: 43
+        width: 31
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26ae93ab1f3f554385be158e8aa9ead
-      internalID: 267633489
+      spriteID: b513ec68e3fffe34daa7716281914f96
+      internalID: -1613097576
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_4
+      name: Orcrider_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
+        x: 437
+        y: 43
+        width: 31
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cdb6a0eadefde44a0e476fe0ada173
-      internalID: 791429640
+      spriteID: db842f8b4633127448c120423a7847ee
+      internalID: 686098586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_5
+      name: Orcrider_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
+        x: 537
+        y: 43
+        width: 31
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce292f596f89f54a9e21692b86fc61f
-      internalID: 1596330421
+      spriteID: 840d62a3c3c246d45a1055e1b4364e43
+      internalID: 1616269158
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton-Idle_0: 1782912422
-      Skeleton-Idle_1: 200008807
-      Skeleton-Idle_2: -932076242
-      Skeleton-Idle_3: 267633489
-      Skeleton-Idle_4: 791429640
-      Skeleton-Idle_5: 1596330421
+      Orcrider_0: -1671265137
+      Orcrider_1: -120931766
+      Orcrider_2: 1500875997
+      Orcrider_3: -1613097576
+      Orcrider_4: 686098586
+      Orcrider_5: 1616269158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

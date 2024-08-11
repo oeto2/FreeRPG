@@ -24,13 +24,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             if (_instance == null)
             {
-                Debug.Log("게임 오브젝트 생성");
-                
                 //오브젝트 생성 이름 지정
                 string typeName = typeof(T).Name;
                 GameObject obj = new GameObject(typeName);
-
+                
                 _instance = obj.AddComponent<T>();
+                
+                // Logger.Log($"{typeName} 오브젝트 생성");
 
                 //isLoad가 true일때만 로드함
                 if (_isLoad)
@@ -42,6 +42,6 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
     public virtual void Init()
     {
-        Debug.Log(transform.name + "is Init");
+        Logger.Log(transform.name + "is Init");
     }
 }

@@ -18,7 +18,7 @@ public class MonsterStatus : MonoBehaviour
     }
 
     //몬스터 SO 데이터 복사하기
-    private void Initialize_MonsterData()
+    public void Initialize_MonsterData()
     {
         Name = monsterSO.Name;
         Grade = monsterSO.Grade;

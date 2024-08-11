@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5320e6cc023540543a87a72f15ebf34d
+guid: 9bbb85319e3795a4bb257f997871de5c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton-Idle_0
+      name: Wizard_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 100
-        height: 100
+        x: 36
+        y: 36
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb68cf6821d390d48bc29a8400ae8b4c
-      internalID: 1782912422
+      spriteID: 81800691be4c15a4189575a444435f0a
+      internalID: -1819062406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_1
+      name: Wizard_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 0
-        width: 100
-        height: 100
+        x: 143
+        y: 42
+        width: 17
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ea421445ea97c47bd8743310888d73
-      internalID: 200008807
+      spriteID: 75b509f6deeb87547950b91eaf9c5fe8
+      internalID: 448270463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_2
+      name: Wizard_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 0
-        width: 100
-        height: 100
+        x: 243
+        y: 43
+        width: 17
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00e1dda68c8497743a49130b1aa0395f
-      internalID: -932076242
+      spriteID: 3e46fc093a644ff49b207456e53c1a98
+      internalID: -1163349289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_3
+      name: Wizard_3
       rect:
         serializedVersion: 2
-        x: 300
-        y: 0
-        width: 100
-        height: 100
+        x: 343
+        y: 43
+        width: 17
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f26ae93ab1f3f554385be158e8aa9ead
-      internalID: 267633489
+      spriteID: 67fe64e0135c017409866e08bd588a42
+      internalID: -268345044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_4
+      name: Wizard_4
       rect:
         serializedVersion: 2
-        x: 400
-        y: 0
-        width: 100
-        height: 100
+        x: 443
+        y: 43
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3cdb6a0eadefde44a0e476fe0ada173
-      internalID: 791429640
+      spriteID: a952a8a8bc9da8243be9d7118965594b
+      internalID: -314696090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton-Idle_5
+      name: Wizard_5
       rect:
         serializedVersion: 2
-        x: 500
-        y: 0
-        width: 100
-        height: 100
+        x: 543
+        y: 43
+        width: 17
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ce292f596f89f54a9e21692b86fc61f
-      internalID: 1596330421
+      spriteID: e8a6301808b718543a2a117d1db7408c
+      internalID: -1734892632
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton-Idle_0: 1782912422
-      Skeleton-Idle_1: 200008807
-      Skeleton-Idle_2: -932076242
-      Skeleton-Idle_3: 267633489
-      Skeleton-Idle_4: 791429640
-      Skeleton-Idle_5: 1596330421
+      Wizard_0: -1819062406
+      Wizard_1: 448270463
+      Wizard_2: -1163349289
+      Wizard_3: -268345044
+      Wizard_4: -314696090
+      Wizard_5: -1734892632
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

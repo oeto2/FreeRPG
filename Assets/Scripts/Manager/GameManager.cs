@@ -50,6 +50,7 @@ public class GameManager : Singleton<GameManager>
     //게임 진행에 필요한 오브젝트 생성
     private void InitializeObjects()
     {
+        UIManager.Instance.ShowPopup<MainPopup>(); //메인팝업 생성
         SetStage1_Monster(); //스테이지 1 몬스터 세팅
         playerObj = ResourceManager.Instance.Instantiate(PrefabsPath.PlayerPrefabPath); //플레이어 생성
         SpawnMonster(); //몬스터 생성
@@ -109,7 +110,7 @@ public class GameManager : Singleton<GameManager>
             _stage.CurSpawnMonsterNum = 0;
         
         int index = _stage.CurSpawnMonsterNum; //소환할 몬스터 인덱스
-        monsterObj = ResourceManager.Instance.Instantiate(_stage.Stage_MonsterPrefabPath[index]); //몬스터 소환
+        monsterObj = PoolManager.Instance.SpawnFromPool(_stage.Stage_MonsterPrefabPath[index]); //몬스터 소환
         targetMonsterStatus = monsterObj.GetComponent<MonsterStatus>();
         _stage.CurSpawnMonsterNum ++; //몬스터 소환 횟수 증가
     }

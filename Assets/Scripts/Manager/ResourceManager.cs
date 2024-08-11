@@ -13,9 +13,13 @@ public class ResourceManager : Singleton<ResourceManager>
 
             Sprite sp = Resources.Load<Sprite>(path);
             _sprites.Add(path, sp);
+            
+            if(sp == null)
+                Logger.LogError($"{path}, 스프라이트를 불러오지 못했습니다");
+            
             return sp as T;
         }
-
+        
         return Resources.Load<T>(path);
     }
 
@@ -24,7 +28,7 @@ public class ResourceManager : Singleton<ResourceManager>
         GameObject prefab = Load<GameObject>($"Prefabs/{path}");
         if (prefab == null)
         {
-            Debug.Log($"Failed to load prefab : {path}");
+            Logger.LogWarning($"Failed to load prefab : {path}");
             return null;
         }
         return Instantiate(prefab, parent);
