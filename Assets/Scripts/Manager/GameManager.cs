@@ -44,11 +44,11 @@ public class GameManager : Singleton<GameManager>
         MonsterSpawnEvent += SpawnMonster; //몬스터 소환 이벤트 구독
         
         GetAllMonstersData(); //모든 몬스터 데이터 가져오기
-        InitializeObjects(); //오브젝트 세팅
+        // InitializeObjects(); //오브젝트 세팅
     }
 
     //게임 진행에 필요한 오브젝트 생성
-    private void InitializeObjects()
+    public void InitializeObjects()
     {
         UIManager.Instance.ShowPopup<MainPopup>(); //메인팝업 생성
         SetStage1_Monster(); //스테이지 1 몬스터 세팅

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "623840701105",
+    "project_id": "freerpg-a6c50",
+    "storage_bucket": "freerpg-a6c50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623840701105:android:0c2e6876b28bf7d0c9d090",
+        "android_client_info": {
+          "package_name": "com.Until.FreeRPG"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa76QaPWnNsCh5cnpjpQ8XlATBmN5bs_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

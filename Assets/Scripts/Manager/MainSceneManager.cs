@@ -18,5 +18,8 @@ public class MainSceneManager : MonoBehaviour
         
         //오브젝트 부모 설정
         UIManager.Instance.parentsUI = uiParentObj.transform;
+        
+        //로그인 팝업 띄우기
+        UIManager.Instance.ShowPopup<LoginPopup>();
     }
 }
