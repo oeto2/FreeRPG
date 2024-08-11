@@ -47,6 +47,11 @@ public class GameManager : Singleton<GameManager>
         // InitializeObjects(); //오브젝트 세팅
     }
 
+    private void OnApplicationQuit()
+    {
+        FirebaseAuthManager.Instance.Logout(); //어플 종료시 로그아웃
+    }
+
     //게임 진행에 필요한 오브젝트 생성
     public void InitializeObjects()
     {

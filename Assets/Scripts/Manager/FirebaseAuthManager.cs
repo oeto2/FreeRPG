@@ -27,8 +27,8 @@ public class FirebaseAuthManager : Singleton<FirebaseAuthManager>
             if (signed)
             {
                 Logger.Log("로그인");
-                UIManager.Instance.CloseUIPopup(nameof(LoginPopup));
-                GameManager.Instance.InitializeObjects();
+                UIManager.Instance.CloseUIPopup(nameof(LoginPopup)); //로그인창 숨기기
+                GameManager.Instance.InitializeObjects(); // 게임시작
             }
         }
     }
